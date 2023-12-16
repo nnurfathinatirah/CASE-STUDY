@@ -1,4 +1,6 @@
 public class DiscountProduct {
-    private Product product;
-    
+    private String product;
+    private double discount;
+    private double total;
+
 }
