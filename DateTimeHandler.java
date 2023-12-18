@@ -1,16 +1,15 @@
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class DateTimeHandler {
+
     public static void main(String[] args) {
-        // Get the current date and time
-        LocalDateTime now = LocalDateTime.now();
 
-        // Format the date and time using a specific pattern
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String formattedDateTime = now.format(formatter);
+        Date dateTime = new Date();
+        SimpleDateFormat dateFormatter = new SimpleDateFormat("MM/dd/yyyy");
+        SimpleDateFormat timeFormatter = new SimpleDateFormat("hh:mm a");
 
-        // Display the formatted date and time
-        System.out.println("Current date and time: " + formattedDateTime);
+        System.out.println("Date: " + dateFormatter.format(dateTime));
+        System.out.println("Time: " + timeFormatter.format(dateTime));
     }
 }
