@@ -5,14 +5,14 @@ public class Product {
     private int quantity;
     private double total;
 
-    public Product(int itemNo, String description, double price, int quantity) {
+    public Product(int itemNo, String description, double price) {
         this.itemNo = itemNo;
         this.description = description;
         this.price = price;
-        this.quantity = quantity;
-        this.total = price * quantity;
+        this.quantity = 0;
+        this.total = 0;
     }
-//getter
+
     public int getItemNo() {
         return itemNo;
     }
@@ -32,38 +32,26 @@ public class Product {
     public double getTotal() {
         return total;
     }
-//setter
-
-    public void setItemNo(int itemNo) {
-        this.itemNo = itemNo;
-    }
-    
-    public void setDescription(String description) {
-        this.description = description;
-    }
-  
-    public void setPrice(double price) {
-        this.price = price;
-    }
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
-        this.total = price * quantity;
+        this.total = this.price * this.quantity;
     }
-
     public void setTotal(double total) {
         this.total = total;
     }
-   
-    //update total cost based on quantity
-    public void updateTotal() {
-        this.total = price * quantity;
-    }
+   public double applyDiscount() {
+        double discount = 0;
+        if (this.total > 20) {
+            discount = this.total * 0.25; // 25% discount if total is more than $20//
+            this.total -= discount;
+        }
+        return discount;
+    } 
 
     @Override
     public String toString() {
-         return itemNo + " " + description + " - $" + price + " x " + quantity + " = $" + total;
+        return itemNo + " " + description + " - $" + price + " x " + quantity + " = $" + total;
     }
-    
 }
 
