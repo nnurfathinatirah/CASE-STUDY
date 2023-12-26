@@ -16,18 +16,21 @@ public class POSTest {
         System.out.println("\tWelcome to the Point of Sale System");
         System.out.println("=============================================");
         System.out.println("Available Products:");
-        for (Product p : products) {
+        for (int i = 0; i < products.length; i++) {
+            Product p = products[i];
             System.out.println(p.getItemNo() + ". " + p.getDescription() + " - RM" + p.getPrice());
             System.out.print("Enter quantity for " + p.getDescription() + ": ");
             int quantity = scanner.nextInt();
             p.setQuantity(quantity);
         }
 
+
         double totalAmount = 0;
         double totalDiscount = 0;
         System.out.println("=============================================");
         System.out.println("Your Cart:");
-        for (Product p : products) {
+        for (int i = 0; i< products.length; i++) {
+            Product p = products[i];
             System.out.println(p);
             totalAmount += p.getTotal();
             totalDiscount += p.applyDiscount(); // Apply discount for each product
