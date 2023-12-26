@@ -40,3 +40,4 @@ public class POSTest {
         pos.CalculateTotal(totalAmount, totalDiscount);
         DateTimeHandler.printDateTime();
     }
+}
