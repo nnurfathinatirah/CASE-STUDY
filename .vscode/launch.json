@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "POSTest",
+            "request": "launch",
+            "mainClass": "POSTest",
+            "projectName": "CASE-STUDY_6dc6462"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
