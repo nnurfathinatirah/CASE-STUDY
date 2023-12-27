@@ -4,15 +4,7 @@ public class DiscountProduct extends Product {
         super(itemNo, description, price);
     }
 
-    // Getter for total 
-    public double getTotal() {
-        return super.getTotal();
-    }
-
-    // Setter for total 
-    public void setTotal(double total) {
-        super.setTotal(total);
-    }
+   
 
     @Override
     public double applyDiscount() {
