@@ -40,15 +40,6 @@ public class Product {
     public void setTotal(double total) {
         this.total = total;
     }
-   public double applyDiscount() {
-        double discount = 0;
-        if (this.total > 20) {
-            discount = this.total * 0.25; // 25% discount if total is more than RM20 //
-            this.total -= discount;
-        }
-        return discount;
-    } 
-
     @Override
     public String toString() {
         return itemNo + " " + description + " - RM" + price + " x " + quantity + " = RM" + total;
