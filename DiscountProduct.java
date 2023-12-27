@@ -4,16 +4,6 @@ public class DiscountProduct extends Product {
         super(itemNo, description, price);
     }
 
-    @Override
-    public double applyDiscount() {
-        double discount = 0;
-        if (super.getTotal() > 20) {
-            discount = super.getTotal() * 0.25; // 25% discount if total is more than $20
-            super.setTotal(super.getTotal() - discount);
-        }
-        return discount;
-    }
-
     // Getter for total 
     public double getTotal() {
         return super.getTotal();
@@ -24,4 +14,16 @@ public class DiscountProduct extends Product {
         super.setTotal(total);
     }
 
+    @Override
+    public double applyDiscount() {
+        double discount = 0;
+        if (super.getTotal() > 20) {
+            discount = super.getTotal() * 0.25; // 25% discount if total is more than $20
+            super.setTotal(super.getTotal() - discount);
+        }
+        return discount;
+    }
+
+    
+    
 }

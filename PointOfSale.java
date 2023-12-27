@@ -33,5 +33,6 @@ public class PointOfSale {
         System.out.println("Thank you for shopping with us!");
         System.out.println("=============================================");
         System.out.println("Total amount (incl. GST): RM" + decimalFormat.format(grandTotal));
+
     }
 }

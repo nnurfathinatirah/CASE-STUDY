@@ -39,5 +39,6 @@ public class POSTest {
         PointOfSale pos = new PointOfSale();
         pos.CalculateTotal(totalAmount, totalDiscount);
         DateTimeHandler.printDateTime();
+        scanner.close();
     }
 }
