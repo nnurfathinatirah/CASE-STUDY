@@ -33,9 +33,10 @@ public class POSTest {
             Product p = products[i];
             System.out.println(p);
             totalAmount += p.getTotal();
-            totalDiscount += p.applyDiscount(); // Apply discount for each product
         }
 
+        DiscountProduct dp = new DiscountProduct();
+        totalDiscount += dp.applyDiscount(totalAmount); 
         PointOfSale pos = new PointOfSale();
         pos.CalculateTotal(totalAmount, totalDiscount);
         DateTimeHandler.printDateTime();

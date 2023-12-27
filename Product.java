@@ -54,4 +54,3 @@ public class Product {
         return itemNo + " " + description + " - RM" + price + " x " + quantity + " = RM" + total;
     }
 }
-
