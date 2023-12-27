@@ -10,11 +10,12 @@ public class PointOfSale {
         double totalAfterDis = totalAmount - totalDiscount;
         double grandTotal = totalAfterDis + (totalAfterDis * GST);
 
-        System.out.println("Total amount: RM" + decimalFormat.format(totalAmount));
-        System.out.println("Total amount after discount: RM" + decimalFormat.format(totalAfterDis));
-        System.out.println("Total amount (incl. GST): RM" + decimalFormat.format(grandTotal));
+        System.out.println();
+        System.out.println("Subtotal            : RM" + decimalFormat.format(totalAmount));
+        System.out.println("Total after discount: RM" + decimalFormat.format(totalAfterDis));
+        System.out.println("Total (GST Incl.)   : RM" + decimalFormat.format(grandTotal));
 
-        System.out.print("Enter amount paid: RM");
+        System.out.print("Enter amount paid   : RM");
         double amountPaid = scanner.nextDouble();
         processPayment(amountPaid, grandTotal);
     }
@@ -32,6 +33,6 @@ public class PointOfSale {
     public void printReceipt(double grandTotal) {
         System.out.println("Thank you for shopping with us!");
         System.out.println("=============================================");
-        System.out.println("Total amount (incl. GST): RM" + decimalFormat.format(grandTotal));
+        System.out.println("Total ( GST Incl.): RM" + decimalFormat.format(grandTotal));
     }
 }
