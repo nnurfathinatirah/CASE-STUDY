@@ -33,6 +33,6 @@ public class PointOfSale {
     public void printReceipt(double grandTotal) {
         System.out.println("Thank you for shopping with us!");
         System.out.println("=============================================");
-        System.out.println("Total ( GST Incl.): RM" + decimalFormat.format(grandTotal));
+        System.out.println("Total amount (incl. GST): RM" + decimalFormat.format(grandTotal));
     }
 }

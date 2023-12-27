@@ -13,7 +13,7 @@ public class POSTest {
 
         Product[] products = { p1, p2, p3, p4, p5, p6 };
 
-        System.out.println("\tWelcome to the Point of Sale System");
+        System.out.println("\tWelcome to Talata Store");
         System.out.println("=============================================");
         System.out.println("Available Products:");
         for (int i = 0; i < products.length; i++) {
@@ -39,5 +39,6 @@ public class POSTest {
         PointOfSale pos = new PointOfSale();
         pos.CalculateTotal(totalAmount, totalDiscount);
         DateTimeHandler.printDateTime();
+        scanner.close();
     }
 }
