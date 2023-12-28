@@ -21,10 +21,8 @@ Here the UML :
 
 
 
-
- 
-
  References : 
             1. https://moodle.dallastown.k12.pa.us/pluginfile.php/379743/mod_resource/content/1/Java%20Text%20-%20Liang.pdf
-            2. https://github.com/vincentdyleung/A-Simple-POS-System/blob/master/COMP3021PA1/src/info/vforvincent/comp3021/pos/InteractionInstruction.java
+            2. https://github.com/vincentdyleung/A-Simple-POS- 
+               System/blob/master/COMP3021PA1/src/info/vforvincent/comp3021/pos/InteractionInstruction.java
             3. https://github.com/topics/point-of-sale?l=java
