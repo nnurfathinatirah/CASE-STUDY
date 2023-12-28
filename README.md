@@ -42,8 +42,10 @@ Group Member Details : 1) NURFATHIN ATIRAH BINTI MOHAMMAD UDIN (2118168)
 
 
 
- References : 
-            1. https://moodle.dallastown.k12.pa.us/pluginfile.php/379743/mod_resource/content/1/Java%20Text%20-%20Liang.pdf
-            2. https://github.com/topics/point-of-sale?l=java
-            3. https://code-projects.org/simple-point-of-sale-in-java-with-source-code/
-            4. https://www.youtube.com/watch?v=EPt8O5N42r0
+ **References** : 1. https://moodle.dallastown.k12.pa.us/pluginfile.php/379743/mod_resource/content/1/Java%20Text%20-%20Liang.pdf
+            
+                  2. https://github.com/topics/point-of-sale?l=java
+            
+                  3. https://code-projects.org/simple-point-of-sale-in-java-with-source-code/
+            
+                  4. https://www.youtube.com/watch?v=EPt8O5N42r0
