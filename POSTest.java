@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class POSTest {
@@ -16,15 +17,24 @@ public class POSTest {
         System.out.println("\tWelcome to Talata Store");
         System.out.println("=============================================");
         System.out.println("Available Products:");
-        for (int i = 0; i < products.length; i++) {
+       for (int i = 0; i < products.length; i++) {
             Product p = products[i];
             System.out.println(p.getItemNo() + ". " + p.getDescription() + " - RM" + p.getPrice());
+            int quantity = 0;
+            boolean validInput = false;
+        while (!validInput) {
             System.out.print("Enter quantity for " + p.getDescription() + "\t: ");
-            int quantity = scanner.nextInt();
-            p.setQuantity(quantity);
+            try {
+                quantity = scanner.nextInt();
+                validInput = true;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter an integer.");
+                scanner.next(); // discard the invalid input
+            }
         }
-
-
+        p.setQuantity(quantity);
+       
+    }
         double totalAmount = 0;
         double totalDiscount = 0;
         System.out.println("=============================================");
