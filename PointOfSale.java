@@ -23,6 +23,7 @@ public class PointOfSale {
 
     
     private double getValidAmountPaid() {
+        
         while (true) {
             try {
                 return scanner.nextDouble();

@@ -35,7 +35,7 @@ public class POSTest {
 
         double totalAmount = 0;
         double totalDiscount = 0;
-        System.out.println("=============================================");
+        System.out.println("==============================================");
         System.out.println("Your Cart:");
         for (int i = 0; i< products.length; i++) {
             Product p = products[i];
