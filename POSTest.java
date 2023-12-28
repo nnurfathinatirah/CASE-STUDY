@@ -17,21 +17,25 @@ public class POSTest {
         System.out.println("\tWelcome to Talata Store");
         System.out.println("=============================================");
         System.out.println("Available Products:");
-       for (int i = 0; i < products.length; i++) {
+        for (int i = 0; i < products.length; i++) {
             Product p = products[i];
             System.out.println(p.getItemNo() + ". " + p.getDescription() + " - RM" + p.getPrice());
-            int quantity = 0;
-            boolean validInput = false;
-        while (!validInput) {
             System.out.print("Enter quantity for " + p.getDescription() + "\t: ");
-            int quantity = scanner.nextInt();
-            p.setQuantity(quantity);
-        }
 
+            String quantityString = scanner.next();
+
+            try {
+                int quantity = Integer.parseInt(quantityString);
+                p.setQuantity(quantity);
+            } catch (NumberFormatException | InputMismatchException e) {
+                System.out.println("Error: Invalid input. Please enter a numerical value.");
+                
+            }
+        }
 
         double totalAmount = 0;
         double totalDiscount = 0;
-        System.out.println("==============================================");
+        System.out.println("=============================================");
         System.out.println("Your Cart:");
         for (int i = 0; i< products.length; i++) {
             Product p = products[i];

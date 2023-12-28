@@ -16,14 +16,14 @@ public class PointOfSale {
         System.out.println("Total after discount: RM" + decimalFormat.format(totalAfterDis));
         System.out.println("Total (GST Incl.)  : RM" + decimalFormat.format(grandTotal));
 
-        System.out.print("Enter amount paid  : RM");
+        System.out.print("Enter amount paid : RM");
         double amountPaid = getValidAmountPaid();
         processPayment(amountPaid, grandTotal);
     }
 
     
     private double getValidAmountPaid() {
-        
+
         while (true) {
             try {
                 return scanner.nextDouble();
