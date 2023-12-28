@@ -46,7 +46,7 @@ public class POSTest {
         DiscountProduct dp = new DiscountProduct();
         totalDiscount += dp.applyDiscount(totalAmount); 
         PointOfSale pos = new PointOfSale();
-        pos.calculateTotal(totalAmount, totalDiscount);
+        pos.CalculateTotal(totalAmount, totalDiscount);
         DateTimeHandler.printDateTime();
         scanner.close();
     }
