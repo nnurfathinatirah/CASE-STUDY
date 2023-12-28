@@ -17,22 +17,24 @@ public class POSTest {
         System.out.println("\tWelcome to Talata Store");
         System.out.println("=============================================");
         System.out.println("Available Products:");
-        for (int i = 0; i < products.length; i++) {
+       for (int i = 0; i < products.length; i++) {
             Product p = products[i];
             System.out.println(p.getItemNo() + ". " + p.getDescription() + " - RM" + p.getPrice());
+            int quantity = 0;
+            boolean validInput = false;
+        while (!validInput) {
             System.out.print("Enter quantity for " + p.getDescription() + "\t: ");
-
-            String quantityString = scanner.next();
-
             try {
-                int quantity = Integer.parseInt(quantityString);
-                p.setQuantity(quantity);
-            } catch (NumberFormatException | InputMismatchException e) {
-                System.out.println("Error: Invalid input. Please enter a numerical value.");
-                
+                quantity = scanner.nextInt();
+                validInput = true;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter an integer.");
+                scanner.next(); // discard the invalid input
             }
         }
-
+        p.setQuantity(quantity);
+       
+    }
         double totalAmount = 0;
         double totalDiscount = 0;
         System.out.println("=============================================");
@@ -46,7 +48,7 @@ public class POSTest {
         DiscountProduct dp = new DiscountProduct();
         totalDiscount += dp.applyDiscount(totalAmount); 
         PointOfSale pos = new PointOfSale();
-        pos.CalculateTotal(totalAmount, totalDiscount);
+        pos.calculateTotal(totalAmount, totalDiscount);
         DateTimeHandler.printDateTime();
         scanner.close();
     }
