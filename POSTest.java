@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class POSTest {
@@ -20,10 +21,17 @@ public class POSTest {
             Product p = products[i];
             System.out.println(p.getItemNo() + ". " + p.getDescription() + " - RM" + p.getPrice());
             System.out.print("Enter quantity for " + p.getDescription() + "\t: ");
-            int quantity = scanner.nextInt();
-            p.setQuantity(quantity);
-        }
 
+            String quantityString = scanner.next();
+
+            try {
+                int quantity = Integer.parseInt(quantityString);
+                p.setQuantity(quantity);
+            } catch (NumberFormatException | InputMismatchException e) {
+                System.out.println("Error: Invalid input. Please enter a numerical value.");
+               
+            }
+        }
 
         double totalAmount = 0;
         double totalDiscount = 0;
@@ -38,7 +46,7 @@ public class POSTest {
         DiscountProduct dp = new DiscountProduct();
         totalDiscount += dp.applyDiscount(totalAmount); 
         PointOfSale pos = new PointOfSale();
-        pos.CalculateTotal(totalAmount, totalDiscount);
+        pos.calculateTotal(totalAmount, totalDiscount);
         DateTimeHandler.printDateTime();
         scanner.close();
     }
